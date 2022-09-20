@@ -1,0 +1,119 @@
+.Cards{
+    height: 150px;
+    width: 330px;
+    margin: 0px auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.479);
+    display: grid;
+    grid-template-columns: 30px 250px 50px;
+    animation: render 1s linear;
+}
+.Cards_profile{
+    width: 30px;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    color: rgb(82, 82, 82);
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 10px 0px 0px 10px;
+}
+.Cards_info{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(82, 82, 82);
+    height: 100%;
+}
+.Cards_info > h2 {
+    font-size: 1.4rem;
+}
+.Cards_actions {
+    height: 100%;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Cards_actions > button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    transition: 0.2s linear;
+}
+.update{
+    background-color: #108a00;
+}
+.delete{
+    background-color: rgb(177, 0, 0);
+}
+.Cards_actions > button:hover{
+    cursor: pointer;
+    background-color:rgb(82, 82, 82);
+    color: black;
+}
+.Cards_actions > button > svg {
+    height: 10px;
+    width: 10px;
+    pointer-events: none;
+}
+.deleteAnimation {
+    animation: delete 2s linear;
+}
+
+@keyframes render {
+    0%{
+        scale: 0;
+    }
+    50%{
+        scale: 1.05;
+    }
+    100%{
+        scale: 1;
+    }
+}
+@keyframes delete {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        background-color: rgb(138, 0, 0);
+        opacity: 0;
+
+    }
+}
+
+@media (min-width: 500px) {
+    .Cards{
+        height: 150px;
+        width: 420px;
+        box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.479);
+        display: grid;
+        grid-template-columns: 50px 300px 70px;
+    }
+    .Cards_profile{
+        width: 50px;
+        padding: 10px;
+    }
+    .Cards_info{
+        width: 300px;
+    }
+    .Cards_actions{
+        width: 70px;
+    }
+    .Cards_actions > button{
+        width: 50px;
+        height: 50px;
+    }
+}

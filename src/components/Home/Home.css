@@ -1,0 +1,78 @@
+.Home{
+    display: flex;
+    flex-direction: column;
+    min-height: 95vh;
+    width: 90vw;
+    margin: 10px auto;
+}
+.Form{
+    position: fixed;
+    top: -150%;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background-color: #000000de;
+    transition: 0.4s linear;
+}
+.show{
+    top: 0;
+}
+.Home_actions{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.Home_actions > button {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #15b800;
+    color: white;
+    font-size: 2rem;
+    transition: 0.2s linear;
+}
+.Home_actions > button:hover{
+    cursor: pointer;
+    background-color: #19d800;
+}
+.Home_users{
+    min-height: 400px;
+    background-color: #202020;
+    border-radius: 10px;
+    padding: 10px 5px;
+    width: 100%;
+}
+.Home_users > h2{
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+.Home_cards{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    min-height: 400px;
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    .Home{
+        flex-direction: row;
+        justify-content: space-evenly ;
+        align-items: center;
+    }
+    .Home_users{
+        width: 530px;
+    }
+    .Home_actions{
+        width: 200px;
+    }
+}
